@@ -1,3 +1,79 @@
+
+languages = {
+  :oo => {
+    :ruby => {
+      :type => "interpreted"
+    },
+    :javascript => {
+      :type => "interpreted"
+    },
+    :python => {
+      :type => "interpreted"
+    },
+    :java => {
+      :type => "compiled"
+    }
+  },
+  :functional => {
+    :clojure => {
+      :type => "compiled"
+    },
+    :erlang => {
+      :type => "compiled"
+    },
+    :scala => {
+      :type => "compiled"
+    },
+    :javascript => {
+      :type => "interpreted"
+    }
+ 
+  }
+}
+
+
 def reformat_languages(languages)
-  # your code here
+  new_hash = {}
+  type_array = []
+  temp_hold_hash = {}
+  given_hash = languages
+  
+  languages.each do |type, language_info|
+    type_array << type
+    new_hash = language_info
+    new_hash.each do |language, info|
+      temp_hold_hash[type] = language
+      #info[:style] = type_array
+    end
+    puts temp_hold_hash
+  end
+    #type_array = []
+    
+
+  
+
+=begin
+  languages.each do |type, language_info|
+    type_array << type
+    language_info.each do |language, info|
+      new_hash = language
+      new_hash[:info][:style] = type_array
+    end
+  end
+  
+=begin
+  languages.each do |type, language_info|
+    type_array << type
+    new_hash = language_info
+  end
+  
+  new_hash.each do |language, info|
+    info[:style] = type_array
+  end
+=end
+
+  puts new_hash
+  new_hash
 end
+
+reformat_languages(languages)
