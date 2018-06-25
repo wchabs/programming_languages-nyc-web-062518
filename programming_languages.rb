@@ -50,7 +50,7 @@ def reformat_languages(languages)
           if !info[:style]
             info[:style] = [type]
           else
-            
+            info[:style] << type
         end
       end
     end
