@@ -60,33 +60,6 @@ def reformat_languages(languages)
     end
   end
   
-  #new_hash.each do |language, info|
-  #  info[:style] = type_array
-  #end
-    
-
-  
-
-=begin
-  languages.each do |type, language_info|
-    type_array << type
-    language_info.each do |language, info|
-      new_hash = language
-      new_hash[:info][:style] = type_array
-    end
-  end
-  
-=begin
-  languages.each do |type, language_info|
-    type_array << type
-    new_hash = language_info
-  end
-  
-  new_hash.each do |language, info|
-    info[:style] = type_array
-  end
-=end
-
   #puts new_hash
   new_hash
 end
