@@ -40,7 +40,7 @@ def reformat_languages(languages)
   
   languages.each do |type, language_info|
     type_array << type
-    new_hash = language_info
+    new_hash = new_hash.merge(language_info)
   end
   
   new_hash.each do |language, info|
