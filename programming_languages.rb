@@ -52,7 +52,7 @@ def reformat_languages(languages)
           else
             temp_array = info[:style]
             puts temp_array
-            temp_array << [type]
+            temp_array << type
             puts temp_array
             info[:style] = temp_array
           end
