@@ -47,7 +47,10 @@ def reformat_languages(languages)
     languages.each do |type, language_info|
       language_info.each do |language2, info2|
         if language == language2
-          info[:style] = [type]
+          if !info[:style]
+            info[:style] = [type]
+          else
+            
         end
       end
     end
