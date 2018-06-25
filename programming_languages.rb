@@ -50,7 +50,9 @@ def reformat_languages(languages)
           if !info[:style]
             info[:style] = [type]
           else
-            info[:style] << type
+            temp_array = info[:style]
+            temp_array << type
+            info[:style] = temp_array
         end
       end
     end
