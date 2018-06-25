@@ -41,13 +41,11 @@ def reformat_languages(languages)
   languages.each do |type, language_info|
     type_array << type
     new_hash = language_info
-    new_hash.each do |language, info|
-      temp_hold_hash[type] = language
-      #info[:style] = type_array
-    end
-    puts temp_hold_hash
   end
-    #type_array = []
+  
+  new_hash.each do |language, info|
+    info[:style] = type_array
+  end
     
 
   
